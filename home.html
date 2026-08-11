@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介護福祉士試験予想問題集</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* ルビ（フリガナ）の共通装飾設定 */
+        ruby {
+            ruby-align: center;
+        }
+        rt {
+            font-size: 0.55em;
+            font-weight: 700;
+            color: #b91c1c; /* 視認性の高い濃い赤色 */
+            line-height: 1.1;
+        }
+
+        /* カードの立体感と影 */
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* カードホバー・タップ時の演出 */
+        .category-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(16, 185, 129, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .category-card:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 flex flex-col items-center min-h-screen p-3 md:p-6">
+
+    <!-- メインコンテナ -->
+    <div class="w-full max-w-md md:max-w-4xl flex flex-col flex-1">
+
+        <!-- 1. トップヘッダー ＆ メインタイトル -->
+        <header class="bg-white rounded-3xl p-6 md:p-8 mb-6 card-shadow border-2 border-emerald-400 text-center relative overflow-hidden">
+            <!-- 装飾用背景パターン（丸） -->
+            <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-50 rounded-full z-0"></div>
+            <div class="absolute -left-6 -top-6 w-20 h-20 bg-emerald-50 rounded-full z-0"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- サブバッジ -->
+                <div class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 font-bold text-xs px-3.5 py-1.5 rounded-full mb-3">
+                    <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
+                    <span><ruby>国家試験<rt>こっかしけん</rt></ruby><ruby>対策<rt>たいさく</rt></ruby> <ruby>学習<rt>がくしゅう</rt></ruby>アプリ</span>
+                </div>
+
+                <!-- 大見出し -->
+                <h1 class="text-2xl md:text-3xl font-black text-slate-800 leading-snug mb-3 tracking-wide">
+                    <ruby>介護福祉士<rt>かいごふくしし</rt></ruby><ruby>試験<rt>しけん</rt></ruby><ruby>予想<rt>よそう</rt></ruby><ruby>問題集<rt>もんだいしゅう</rt></ruby>
+                </h1>
+
+                <!-- 説明文 -->
+                <p class="text-xs md:text-sm text-slate-600 max-w-xl leading-relaxed">
+                    すべての<ruby>漢字<rt>かんじ</rt></ruby>にルビ（フリガナ）がついた<ruby>演習<rt>えんしゅう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>です。<br class="hidden sm:inline">
+                    <ruby>単元<rt>たんげん</rt></ruby>ごとに<ruby>挑戦<rt>ちょうせん</rt></ruby>して、<ruby>合格<rt>ごうかく</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>しましょう！
+                </p>
+            </div>
+        </header>
+
+        <!-- 2. 単元（問題ページ）一覧エリア -->
+        <main class="flex-1 mb-6">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-base md:text-lg font-black text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-book-open text-emerald-600"></i>
+                    <span><ruby>単元<rt>たんげん</rt></ruby>を<ruby>選<rt>えら</rt></ruby>んで<ruby>スタート<rt>すたーと</rt></ruby></span>
+                </h2>
+                <span class="text-xs text-slate-400 font-bold">全 6 単元</span>
+            </div>
+
+            <!-- 問題ページへのリンクカードリスト（グリッド表示） -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+
+                <!-- 単元カード 1: 人間の尊厳と自立 -->
+                <a href="ningen_songen.html" class="category-card bg-white p-4 rounded-2xl border-2 border-slate-200 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 1
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                <ruby>人間<rt>にんげん</rt></ruby>の<ruby>尊厳<rt>そんげん</rt></ruby>と<ruby>自立<rt>じりつ</rt></ruby>
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">人権の尊重 / QOL / 権利擁護など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                            3問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-blue-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 単元カード 2: 介護の基本 -->
+                <a href="kaigo_kihon.html" class="category-card bg-white p-4 rounded-2xl border-2 border-emerald-300 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <div>
+                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 1
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                <ruby>介護<rt>かいご</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby>
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">ICF / 自立支援 / プライバシーの保護など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-200">
+                            3問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-emerald-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 単元カード 3: 社会の理解 -->
+                <a href="shakai_rikai.html" class="category-card bg-white p-4 rounded-2xl border-2 border-slate-200 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 1
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                <ruby>社会<rt>しゃかい</rt></ruby>の<ruby>理解<rt>りかい</rt></ruby>
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">介護保険制度 / 障害者福祉 / 社会保障制度など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                            5問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-indigo-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 単元カード 4: 人間関係とコミュニケーション -->
+                <a href="ningen_kankei.html" class="category-card bg-white p-4 rounded-2xl border-2 border-slate-200 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-people-arrows"></i>
+                        </div>
+                        <div>
+                            <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 2
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                <ruby>人間関係<rt>にんげんかんけい</rt></ruby>とコミュニケーション
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">対人関係の形成 / 受容と共感 / 信頼関係など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                            3問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-purple-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 単元カード 5: コミュニケーション技術 -->
+                <a href="communication_gijutsu.html" class="category-card bg-white p-4 rounded-2xl border-2 border-slate-200 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-amber-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div>
+                            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 2
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                コミュニケーション<ruby>技術<rt>ぎじゅつ</rt></ruby>
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">言語・非言語 / 障害に応じた対応など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                            3問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-amber-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 単元カード 6: 生活支援技術 -->
+                <a href="seikatsu_shien.html" class="category-card bg-white p-4 rounded-2xl border-2 border-slate-200 card-shadow flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 font-bold flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-rose-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <div>
+                            <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded-md mb-1 inline-block">
+                                <ruby>領域<rt>りょういき</rt></ruby> 2
+                            </span>
+                            <h3 class="font-bold text-sm md:text-base text-slate-800">
+                                <ruby>生活支援技術<rt>せいかつしえんぎじゅつ</rt></ruby>
+                            </h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">移動・食事・排泄・身じたくの介助など</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                            5問
+                        </span>
+                        <span class="text-[11px] text-slate-400 font-bold group-hover:text-rose-600 flex items-center gap-1 transition">
+                            解く <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+
+        <!-- 3. フッター -->
+        <footer class="w-full text-center text-slate-400 text-[11px] py-4 mt-auto border-t border-slate-200">
+            <p><ruby>介護福祉士<rt>かいごふくしし</rt></ruby><ruby>国家試験<rt>こっかしけん</rt></ruby><ruby>対策<rt>たいさく</rt></ruby> <ruby>学習<rt>がくしゅう</rt></ruby>アプリ</p>
+            <p class="mt-0.5 text-[10px] text-slate-300">&copy; 2026 Kaigo Exam App</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
